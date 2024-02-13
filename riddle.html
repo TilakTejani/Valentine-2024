@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Valentine Wanted</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+	
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+    <script>
+        function adjustCodePosition() {
+        $("#code").css(
+            "margin-top",
+            ($("#garden").height() - $("#code").height()) / 2
+        );
+}
+    </script>
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="content">
+
+            <div id="loveHeart">
+                
+                <canvas id="garden"></canvas>
+                
+                <div id="words" >
+                    <div id="code">
+                        <span class="string">From hands that nurtured me with care,</span><br>
+                        <span class="string">A token comes, a love to share.</span><br>
+                        <span class="string">It speaks of values, strong and true,</span><br>
+                        <span class="string">A foundation for dreams, just for two.</span><br>
+                        <br>
+                        <span class="string">Will you take this symbol in your hand,</span><br>
+                        <span class="string">And walk with me on shifting sand?</span><br>
+                        <span class="string">Together we'll write our story fair,</span><br>
+                        <span class="string">With growth for each, and love to spare.</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 1000);
+
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</html>

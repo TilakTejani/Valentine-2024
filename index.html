@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Valentine Wanted</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+	
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script>
+		function noClick(){
+			console.log('no click');
+			var noBtn = $("#nobtn");
+			noBtn.css("position", "absolute");
+			noBtn.css("top", Math.random()*(window.innerHeight+10)+  "px");
+			noBtn.css("left", Math.random()*(window.innerWidth+10)+ "px");
+			var noTexts = [
+				"Nice Try",
+				"tch tch tch",
+				"not acceptable",
+				"can't say no",
+				"try again",
+				"missed it",
+				"almost there",
+				"not quite the answer",
+				"close, but wrong",
+				"almost there",
+				"a near miss"
+			]
+
+			document.getElementById("nobtn").innerHTML	= noTexts[Math.floor(Math.random() * noTexts.length)]
+
+		}
+	</script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="placeholder"></span>
+			<span class="placeholder"></span>
+			<h1>Job Posting : Valentine Wanted</h1>
+
+			<span class="string">Are you qualified for an adventure in <span class="keywords">love</span>?<br>
+			Join me and become the <span class="keywords">Valentine</span> of someone's dreams!</span><br>
+			<br>
+
+			<span class="keywords">Qualifications:</span>
+			<ol class="string">
+			  <li>Must have a heart full of love and a smile that lights up the room.</li>
+			  <li>Excellent communication skills, especially in the language of laughter and inside jokes.</li>
+			  <li>Ability to make any day feel like a celebration and turn ordinary moments into extraordinary memories.</li>
+			  <li>Must possess a keen sense of humor and be willing to laugh at my cheesy jokes.</li>
+			  <li>Prior experience in cuddling, hand-holding, and stealing kisses is a plus but not required (we can train on the job).</li>
+			</ol>
+		  
+			<span class="keywords">Responsibilities:</span>
+			<ol class="string">
+			  <li>Spread joy, laughter, and love wherever you go.</li>
+			  <li>Accompany me on romantic strolls, spontaneous adventures, and Netflix binge-watching sessions.</li>
+			  <li>Share secret dreams, fears, and hopes under the stars.</li>
+			  <li>Assist in creating heart-melting moments and unforgettable memories.</li>
+			</ol>
+		  
+			<span class="keywords">Benefits:</span>
+			<ol class="string">
+			  <li>Competitive salary in hugs, kisses, and cuddles.</li>
+			  <li>Flexible hours to accommodate spontaneous acts of romance and fun.</li>
+			  <li>Access to a lifetime supply of inside jokes, cheesy pick-up lines, and sweet gestures.</li>
+			  <li>Opportunity for growth in the form of deepening emotional connections and building a future together.</li>
+			</ol>
+		  
+			<span class="string">Ready to apply? Simply click on '<span class="keywords">Yes</span>' and get you first assignement, <br>
+			<span class="string">on this journey of being my Valentine and prepare for a lifetime of love, laughter, and happiness!</span><br>
+			<span class="string">Or also, you can try option '<span class="keywords">No</span>', <span class="keywords">if you want</span>.</span>
+			<br>
+			<a href="riddle.html"><button class="btn btn-primary">Yes</button></a><button class="btn btn-danger" id="nobtn" onclick="noClick()">No</button>
+			<span class="noMessage keywords"></span>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
